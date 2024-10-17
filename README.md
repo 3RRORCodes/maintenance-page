@@ -4,7 +4,7 @@ Welcome to the **maintenance page** for Error Hub! This is a simple but stylish 
 
 ## Preview
 
-Want to see it in action? Check it out [here](https://htmlpreview.github.io/https://github.com/3RRORCodes/maintenance-page/blob/main/index.html).
+Want to see it in action? Check it out [here](https://htmlpreview.github.io/?https://github.com/3RRORCodes/maintenance-page/blob/main/index.html).
 
 ## Why I Made This
 
