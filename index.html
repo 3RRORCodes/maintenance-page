@@ -8,23 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="config.js"></script>
 </head>
 <body>
     <div class="overlay"></div>
-    <nav class="navbar">
-        <a id="discord-link" class="nav-link"><i class="fab fa-discord"></i> Discord</a>
-        <a id="youtube-link" class="nav-link"><i class="fab fa-youtube"></i> YouTube</a>
-        <a id="docs-link" class="nav-link"><i class="fas fa-book"></i> Documentation</a>
-    </nav>
+
+    <nav class="navbar"></nav>
+
     <div class="container">
         <i class="fas fa-screwdriver-wrench maintenance-icon"></i>
         <h1 id="main-heading"></h1>
         <p id="main-text"></p>
         <p id="store-text"></p>
-        <div class="links">
-            <a id="store-link" class="link store-link"><i class="fas fa-crown"></i> Visit Store</a>
-        </div>
+        <div class="links"></div>
     </div>
 
     <i class="fas fa-screwdriver-wrench snowflake" style="left: 10%;"></i>
@@ -38,16 +33,7 @@
         <p class="footer-text">&copy; <span id="footer-text"></span></p>
     </footer>
 
-    <script>
-        document.getElementById('page-title').textContent = config.title;
-        document.getElementById('main-heading').textContent = config.mainHeading;
-        document.getElementById('main-text').textContent = config.mainText;
-        document.getElementById('store-text').textContent = config.storeText;
-        document.getElementById('footer-text').textContent = config.footerText;
-        document.getElementById('discord-link').setAttribute('href', config.discordLink);
-        document.getElementById('youtube-link').setAttribute('href', config.youtubeLink);
-        document.getElementById('docs-link').setAttribute('href', config.docsLink);
-        document.getElementById('store-link').setAttribute('href', config.storeLink);
-    </script>
+    <script src="config.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -47,13 +47,17 @@ body {
     padding: 1rem 2rem;
     background-color: var(--navbar-bg);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
 }
 
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 1.5rem;
+    display: inline-flex;
+    align-items: center;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link i {
@@ -147,18 +151,18 @@ p {
     font-size: 1.2em;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
 .maintenance-icon {
     font-size: 5rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
     opacity: 0.7;
     animation: wrench 3s ease infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 @keyframes wrench {
@@ -185,33 +189,66 @@ footer {
     top: -50px;
     color: white;
     font-size: 0.75rem;
-    opacity: 0.3;
+    opacity: 0.2;
     animation: fall 10s linear infinite;
     z-index: 0;
 }
 
 @keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
 }
 
 .snowflake:nth-child(odd) {
     animation-duration: 12s;
-    animation-timing-function: ease-in;
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
 .snowflake:nth-child(even) {
     animation-duration: 8s;
-    animation-timing-function: ease-out;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .snowflake:nth-child(3n) {
     animation-duration: 14s;
     transform: rotate(45deg);
+    opacity: 0.35;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        margin-left: 1rem;
+    }
+
+    .nav-link i {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .store-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .snowflake {
+        font-size: 0.5rem;
+        animation-duration: 8s;
+        opacity: 0.2;
+    }
 }
